@@ -1,22 +1,32 @@
 export default [
   {
     id: 1,
-    title: 'Red',
-    colorImage: ''
+    title: 'Scout Tan',
+    className: 'scout_tan'
   },
   {
     id: 2,
-    title: 'Green',
-    colorImage: ''
+    title: 'Domino Black',
+    className: 'domino_black'
   },
   {
     id: 3,
-    title: 'Blue',
-    colorImage: ''
+    title: 'Seafarer Navy',
+    className: 'seafarer_navy'
   },
   {
     id: 4,
-    title: 'Yellow',
-    colorImage: ''
+    title: 'Bebop Red',
+    className: 'bebop_red'
+  },
+  {
+    id: 5,
+    title: 'Cadet Navy',
+    className: 'cadet_navy'
+  },
+  {
+    id: 6,
+    title: 'Jetty Blue',
+    className: 'jetty_blue'
   }
 ]

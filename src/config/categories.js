@@ -9,6 +9,10 @@ export default [
   },
   {
     id: 3,
+    title: 'Luggage',
+  },
+  {
+    id: 4,
     title: 'Kits'
   },
 ]

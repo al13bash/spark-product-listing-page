@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
 import ProductContainer from '../../containers/ProductContainer';
-import Filter from '../Filter'
+import Filter from '../Filter';
 
 import products from '../../config/products';
 import colors from '../../config/colors';
 import categories from '../../config/categories';
 
-import { intersection } from '../../lib'
+import { intersection } from '../../lib';
+
+import './styles.scss';
 
 class ProductListingPage extends Component {
   state = {
@@ -32,22 +34,25 @@ class ProductListingPage extends Component {
     return (
       <div>
         <h1>Product Listing Page</h1>
-        <h2>Filters</h2>
         <Filter
           options={colorOptions}
           handleChange={this.handleChange}
           name='selectedColors'
+          label='Colors'
         />
         <Filter
           options={categoryOptions}
           handleChange={this.handleChange}
           name='selectedCategories'
+          label='Categories'
         />
-        {
-          products
-            .filter(product => this.filter(product))
-            .map(product => <ProductContainer key={product.id} {...product} />)
-        }
+        <div className='ProductsList'>
+          {
+            products
+              .filter(product => this.filter(product))
+              .map(product => <ProductContainer key={product.id} {...product} />)
+          }
+        </div>
       </div>
     );
   }
