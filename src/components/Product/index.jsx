@@ -3,21 +3,21 @@ import React, { Component } from 'react';
 import './styles.scss';
 
 class Product extends Component {
-  state = {
-    currentColor: this.props.colors[0].id
-  }
-
-  handleColorClick = (color) => {
-    this.setState({ currentColor: color })
-  }
-
   render() {
-    const { title, description, price, colors, images } = this.props;
-    const { currentColor } = this.state;
+    const {
+      id,
+      title,
+      description,
+      price,
+      colors,
+      images,
+      changeColor,
+      selectedColor = this.props.colors[0].id
+    } = this.props;
 
     return (
       <div className='Product'>
-        <img src={images[currentColor]} alt={title} />
+        <img src={images[selectedColor]} alt={title} />
         <h2>{title}</h2>
         <div className='Product__description'>{description}</div>
         <div className='Product__price'>{`$${price}`}</div>
@@ -26,8 +26,8 @@ class Product extends Component {
             colors.map(color =>
               <span
                 key={color.id}
-                className={`Product__color ${color.className} ${color.id === currentColor ? 'selected' : ''}`}
-                onClick={() => this.handleColorClick(color.id)}
+                className={`Product__color ${color.className} ${color.id === selectedColor ? 'selected' : ''}`}
+                onClick={() => changeColor(color.id, id)}
               />
             )
           }

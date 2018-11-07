@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Product from '../components/Product';
 
-import colors from '../config/colors';
+import { changeColor } from '../actions/products';
 
 class ProductContainer extends Component {
   render() {
-    const { title, description, price, colorIds, images } = this.props;
+    const { colorIds, colors } = this.props;
     const productColors = colors.filter(color => colorIds.includes(color.id))
 
     return (
       <Product
-        images={images}
-        title={title}
-        description={description}
-        price={price}
+        {...this.props}
         colors={productColors}
       />
     )
   }
 }
 
-export default ProductContainer;
+export default connect((state) => ({
+  colors: state.colors,
+}), {changeColor})(ProductContainer);
