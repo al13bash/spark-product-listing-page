@@ -27,7 +27,7 @@ class ProductListingPage extends Component {
     const categoryOptions = categories.map(category => ({value: category.id, label: category.title}));
 
     return (
-      <div>
+      <div className='ProductListingPage'>
         <h1>Product Listing Page</h1>
         <Filter
           options={colorOptions}

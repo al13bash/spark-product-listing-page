@@ -8,6 +8,18 @@
   }
 }
 
+@media (max-width: 1080px) {
+  .Product {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 720px) {
+  .Product {
+    flex-basis: 100%;
+  }
+}
+
 .Product__colors {
   display: flex;
   justify-content: center;

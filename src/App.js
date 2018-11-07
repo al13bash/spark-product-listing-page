@@ -5,7 +5,11 @@ import ProductListingPage from './components/ProductListingPage/index';
 class App extends Component {
   render() {
     return (
-      <ProductListingPage />
+      <div className='App'>
+        <div className='Header' />
+        <ProductListingPage />
+        <div className='Footer' />
+      </div>
     );
   }
 }

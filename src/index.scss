@@ -12,3 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  background-color: black;
+  height: 40px;
+}
+
+.Footer {
+  flex-shrink: 0;
+  padding: 50px;
+  background-color: bisque;
+}

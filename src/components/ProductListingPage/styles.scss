@@ -1,4 +1,10 @@
+.ProductListingPage {
+  flex: 1 0 auto;
+}
+
 .ProductsList {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1366px;
+  margin: auto;
 }
